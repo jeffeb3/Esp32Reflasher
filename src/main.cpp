@@ -18,7 +18,7 @@ std::string getFinalName(const std::string& curFilename) {
         return "/config.ini";
     }
     if (lowerCurFilename.compare("/tft35.cur") == 0) {
-        return "/TFT35.zip";
+        return "/TFT35";
     }
 
     if (curFilename.size() <= 3) {
