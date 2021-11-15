@@ -77,11 +77,9 @@ std::vector<std::string> SdCard::getCurFiles()
 
     File file = root.openNextFile();
     while (file) {
-        if (not file.isDirectory()) {
-            if (endsWithCur(file.name()))
-            {
-                curFiles.emplace_back(file.name());
-            }
+        if (endsWithCur(file.name()))
+        {
+            curFiles.emplace_back(file.name());
         }
         file = root.openNextFile();
     }
